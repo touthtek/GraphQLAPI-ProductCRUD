@@ -9,29 +9,35 @@ const jwt = require('jsonwebtoken');
 const app = express();
 
 
-app.get('/', (req, res)=>{
-  res.redirect('/query');
-});
 
-app.use('/query', express_graphql({
-  schema : schema,
-  rootValue : Query,
-  graphiql : true
-}))
 
-app.use('/mutation', express_graphql({
-  schema : schema,
-  rootValue : Mutation,
-  graphiql : true
-}))
+app.get('/', expressPlayground({ endpoint: '/query' }));
 
-app.get('/playground', expressPlayground({ endpoint: '/graphql' }));
+
+
+  app.use('/query', express_graphql({
+    schema : schema,
+    rootValue : Query,
+    graphiql : true
+  }))
+  
+  app.use('/mutation', express_graphql({
+    schema : schema,
+    rootValue : Mutation,
+    graphiql : true
+  }))
+
+
 
 const port = process.env.PORT || 3000;
 app.listen(port, ()=>{
   console.log('graphql api server is runing on port '+port);
 
 });
+
+
+
+
 
 
 
