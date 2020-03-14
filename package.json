@@ -1,0 +1,28 @@
+{
+  "name": "graphqlapi-productcrud",
+  "version": "1.0.0",
+  "description": "GraphQL API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/touthtek/GraphQLAPI-ProductCRUD.git"
+  },
+  "author": "Olu-johnson Oluwatosin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/touthtek/GraphQLAPI-ProductCRUD/issues"
+  },
+  "homepage": "https://github.com/touthtek/GraphQLAPI-ProductCRUD#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "express-graphql": "^0.9.0",
+    "graphql": "^14.6.0",
+    "graphql-playground-middleware-express": "^1.7.12",
+    "jsonwebtoken": "^8.5.1",
+    "uuid": "^7.0.2"
+  }
+}
